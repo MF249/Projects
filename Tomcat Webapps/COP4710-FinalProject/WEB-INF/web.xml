@@ -1,0 +1,363 @@
+<web-app>
+   <!-- General description of your Web application -->
+   <display-name>
+      COP 4710 Final Project
+   </display-name>
+   
+   <description>
+      This is the Web application in which the user
+	  can submit book requests.
+   </description>
+
+<!-- Servlet definitions -->
+	<servlet>
+		<servlet-name>alpha</servlet-name>
+      
+		<description>
+			A servlet that handles database connections and queries.
+		</description>
+      
+		<servlet-class>LoginServlet</servlet-class>
+	  
+		<init-param>
+			<param-name>databaseDriver</param-name>
+			<param-value>com.mysql.cj.jdbc.Driver</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>loginDatabaseName</param-name>
+			<param-value>jdbc:mysql://localhost:3306/logindb</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>rootUsername</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>rootPassword</param-name>
+			<param-value>6916214</param-value>
+		</init-param>
+	</servlet>
+   
+	<servlet>
+		<servlet-name>beta</servlet-name>
+		
+		<description>
+			A servlet that returns the jsp corresponding to the selected task.
+		</description>
+
+		<servlet-class>AdminListServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>theta</servlet-name>
+		
+		<description>
+			A servlet that creates a new admin account.
+		</description>
+
+		<servlet-class>AccountCreation</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>gamma</servlet-name>
+		
+		<description>
+			A servlet that deletes an existing admin account.
+		</description>
+
+		<servlet-class>AccountDeletion</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>omega</servlet-name>
+		
+		<description>
+			A servlet that changes the user's password.
+		</description>
+
+		<servlet-class>ChangePassword</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>sigma</servlet-name>
+		
+		<description>
+			A servlet that clears the faculty database.
+		</description>
+
+		<servlet-class>CreateFacultyDB</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>delta</servlet-name>
+		
+		<description>
+			A servlet that adds a faculty member to the database.
+		</description>
+
+		<servlet-class>AddToDB</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>zeta</servlet-name>
+		
+		<description>
+			A servlet that removes a faculty member from the database.
+		</description>
+
+		<servlet-class>DeleteFromDB</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>omnicron</servlet-name>
+		
+		<description>
+			A servlet that shows all book requests.
+		</description>
+
+		<servlet-class>ViewRequest</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>epsilon</servlet-name>
+		
+		<description>
+			A servlet that finalizes all book requests into a CSV.
+		</description>
+
+		<servlet-class>FinalizeRequest</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>lambda</servlet-name>
+		
+		<description>
+			A servlet that invites a professor to the website
+		</description>
+
+		<servlet-class>IndvInvite</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>kappa</servlet-name>
+		
+		<description>
+			A servlet that sends reminders to all faculty emails.
+		</description>
+
+		<servlet-class>EmailRequest</servlet-class>
+	</servlet>
+
+    <servlet>
+		<servlet-name>mu</servlet-name>
+		
+		<description>
+			A servlet that creates an account for a professor.
+		</description>
+
+		<servlet-class>ProfAccountCreation</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>phi</servlet-name>
+		
+		<description>
+			A servlet that creates a temporary password for a professor.
+		</description>
+
+		<servlet-class>tempPassword</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>upsilon</servlet-name>
+		
+		<description>
+			A servlet that creates a new Request Form.
+		</description>
+
+		<servlet-class>createNewRequest</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>chi</servlet-name>
+		
+		<description>
+			A servlet that deletes a Request Form.
+		</description>
+
+		<servlet-class>deleteRequest</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>psi</servlet-name>
+		
+		<description>
+			A servlet that shows all a professor's requests
+		</description>
+
+		<servlet-class>ViewRequestProf</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>xi</servlet-name>
+		
+		<description>
+			A servlet that adds a book to a request form
+		</description>
+
+		<servlet-class>AddBook</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>nu</servlet-name>
+		
+		<description>
+			A servlet that deletes a book to a request form
+		</description>
+
+		<servlet-class>DeleteBook</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>iota</servlet-name>
+		
+		<description>
+			A servlet that sends an invitation to a single faculty member.
+		</description>
+
+		<servlet-class>EmailRequestSingle</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>rho</servlet-name>
+		
+		<description>
+			A servlet that creates a new professor account.
+		</description>
+
+		<servlet-class>ProfessorCreation</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>pi</servlet-name>
+		
+		<description>
+			A servlet that changes a professor's password.
+		</description>
+
+		<servlet-class>ChangeProPassword</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>alpha</servlet-name>
+		<url-pattern>/LoginServlet/*</url-pattern>
+	</servlet-mapping>
+   
+	<servlet-mapping>
+		<servlet-name>beta</servlet-name>
+		<url-pattern>/AdminListServlet/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>theta</servlet-name>
+		<url-pattern>/AccountCreation/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>gamma</servlet-name>
+		<url-pattern>/AccountDeletion/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>omega</servlet-name>
+		<url-pattern>/ChangePassword/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>sigma</servlet-name>
+		<url-pattern>/CreateFacultyDB/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>delta</servlet-name>
+		<url-pattern>/AddToDB/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>zeta</servlet-name>
+		<url-pattern>/DeleteFromDB/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>omnicron</servlet-name>
+		<url-pattern>/ViewRequest/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>epsilon</servlet-name>
+		<url-pattern>/FinalizeRequest/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>lambda</servlet-name>
+		<url-pattern>/IndvInvite/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>kappa</servlet-name>
+		<url-pattern>/EmailRequest/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>mu</servlet-name>
+		<url-pattern>/ProfAccountCreation/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>phi</servlet-name>
+		<url-pattern>/tempPassword/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>upsilon</servlet-name>
+		<url-pattern>/createNewRequest/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>chi</servlet-name>
+		<url-pattern>/deleteRequest/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>psi</servlet-name>
+		<url-pattern>/ViewRequestProf/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>xi</servlet-name>
+		<url-pattern>/AddBook/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>nu</servlet-name>
+		<url-pattern>/DeleteBook/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>iota</servlet-name>
+		<url-pattern>/EmailRequestSingle/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>rho</servlet-name>
+		<url-pattern>/ProfessorCreation/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>pi</servlet-name>
+		<url-pattern>/ChangeProPassword/*</url-pattern>
+	</servlet-mapping>
+</web-app>
+

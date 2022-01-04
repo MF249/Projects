@@ -1,0 +1,48 @@
+<web-app>
+   <!-- General description of your Web application -->
+   <display-name>
+      CNT 4714 Project 4 Webapp
+   </display-name>
+   
+   <description>
+      This is the Web application in which the user
+	  can access a database via MySQL.
+   </description>
+
+<!-- Servlet definitions -->
+   <servlet>
+		<servlet-name>alpha</servlet-name>
+      
+		<description>
+			A servlet that handles database connections and queries.
+		</description>
+      
+		<servlet-class>MySQLServlet</servlet-class>
+	  
+		<init-param>
+			<param-name>databaseDriver</param-name>
+			<param-value>com.mysql.cj.jdbc.Driver</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>databaseName</param-name>
+			<param-value>jdbc:mysql://localhost:3306/project4</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>6916214</param-value>
+		</init-param>
+   </servlet>
+   
+   <servlet-mapping>
+      <servlet-name>alpha</servlet-name>
+      <url-pattern>/MySQLServlet</url-pattern>
+   </servlet-mapping>
+</web-app>
+
