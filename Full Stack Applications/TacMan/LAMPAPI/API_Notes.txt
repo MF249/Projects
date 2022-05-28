@@ -1,0 +1,27 @@
+delete: 
+takes in ID, UserId
+
+delete from ContactList where id = [id] AND UserId = [UserId]
+
+should either return an empty error, or nothing
+
+search:
+takes in UserId, search
+ 
+select * from ContactList where 
+	(firstname like [search] OR lastname like [search] OR email like [search]
+	OR phone like [search]) AND UserId = [UserId]
+
+should return multiple rows in JSON format
+
+edit:
+takes in ID, UserId, firstname, lastname, phone, email, phone
+
+update ContactList set firstname = [firstname], lastname = [lastname],
+	email = [email], phone = [phone] where ID = [ID] AND UserId = [UserId]
+
+should return either an empty error or nothing
+
+Database tables:
+Users;
+ContactList;
