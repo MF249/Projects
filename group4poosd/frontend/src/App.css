@@ -1,0 +1,276 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Denk+One:400");
+
+/* body color will not change on any page*/
+body {
+  position: relative;
+  background-color: #FEFFDC;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:1;
+}
+
+/* title position will not change on any page*/
+.title {
+  position: relative;
+  width: 696px;
+  height: 114px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #001A5E;
+  border-radius: 14px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  color:#FEFFDC;
+  font-family: Denk One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 100px;
+  
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.1em;
+}
+
+/* logo png on title will not change on any page*/
+.logo {
+  padding-left: 50px;
+}
+
+/* this Account tab will not change on any page*/
+.tab{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* arc png will not change on any page*/
+.arc {
+  /* position: absolute; */
+  width: 581px;
+  height: 59px;
+  /* margin-top: 50px; */
+  /* display: flex; */
+  justify-content: center;
+  /* z-index: 2; */
+}
+
+/* main pane will not change on any page*/
+.main_pane {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 806px;
+  height: 750px;
+
+  display: 'grid';
+  justify-items:'center';
+
+  color:#FEFFDC;
+  font-family: Denk One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center;
+ 
+  background: linear-gradient(180deg,#20CEF2, rgba(32, 206, 242, 0.27) 70%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  overflow:auto;
+  word-wrap: break-word;
+  border-top: 50px solid #20CEF2;
+  z-index:1;
+  position: relative;
+}
+
+.main_pane_grey {
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 80vh;
+  width: 100%;
+
+  display: 'grid';
+  justify-items:'center';
+
+  color:#FEFFDC;
+  font-family: Denk One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center;
+ 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  overflow:auto;
+  word-wrap: break-word;
+  border-top: 50px solid transparent;
+  z-index: 10;
+  position: absolute;
+}
+
+.fields{
+  padding-top: 100px;
+  display: grid;
+  justify-content: center;
+}
+
+.buttons{
+  padding-top: 20px;
+  display: grid;
+  justify-content: center;
+}
+
+input[type=submit]{
+  width: 163px;
+  height: 72px;
+
+  background: #001A5E;
+  border-radius: 14px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  color:#FEFFDC;
+  font-family: Denk One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height:0px;
+
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.welcome{ 
+  color:#001A5E;
+  font-family: Denk One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height:80px;
+
+  display: flex;
+  justify-content: left;
+  z-index: 4;
+  margin-left:20%; 
+  margin-right:auto;
+}
+
+.link{
+  color:#001A5E;
+  font-family: Denk One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+
+  text-decoration: underline;
+
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+}
+
+.search_bar_button:hover{
+  background-color: #20CEF2;
+  border-radius: 14px;
+
+}
+
+.dropdown{
+  position: absolute;
+  top: 58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: white;
+  border: white;
+  border-radius: 10px;
+  padding:1rem;
+  overflow: hidden;
+  display: grid;
+  z-index: 1000;
+}
+
+.menu-item{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 500ms;
+  padding: 0.5 rem;
+  color: #001A5E;
+}
+
+.menu-item:hover{
+  background-color: #001A5E;
+  color: white;
+}
+
+#loginResult{
+  color:#001A5E;
+  font-family: Denk One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height:0px;
+
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+}
+
+input[type=text]{
+  position: relative;
+  display: flex;
+  width: 405px;
+  height: 56px;
+  background-color: #001A5E;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+
+  color: #FEFFDC;
+  font-family: Denk One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 50px;
+  padding-left: 5%;
+}
+
+input[type=checkbox]{
+  width: 30px;
+  height: 30px;
+}
+
+input[type=password]{
+  position: relative;
+  display: flex;
+  width: 405px;
+  height: 56px;
+  background-color: #001A5E;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+
+  color: #FEFFDC;
+  font-family: Denk One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 50px;
+  padding-left: 5%;
+}
+
+#link::placeholder {color:blue}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:#FEFFDC;
+  opacity: 1; /* Firefox */
+}
