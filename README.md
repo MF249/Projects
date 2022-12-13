@@ -30,3 +30,23 @@ Created with the React framework and connected to a MongoDB database to store us
 Uses the Google Places API to return nearby places relating to user's search input.
 Results include the location's name, address, phone number, and website (if availible).
 User can save these places in folders with unique names, as well as editing and deleting these folders.
+
+## Live Bolt Smart Lock (Fall 2022 Senior Design Project)
+# UCF Senior Design Showcase semi-finalist (Department of Electrical and Computer Engineering)
+An integrated lock system that allows a user to unlock their door via a keypad or remotely using
+the Live Bolt companion app. Demonstrations and further documentation can be found on the UCF ECE 
+Senior Design website.
+
+# Frontend Repository
+Repository of the frontend user interface of the Live Bolt Smart Lock companion app.
+Built using the React Native library and developed using the Expo Command Line Interface (CLI). 
+Communicates with the remote database and physical electronic lock using a custom REST API.
+
+Link: https://github.com/MF249/Senior-Design-App
+
+# REST API Repository
+Repository of the REST API used for the Live Bolt Smart Lock companion app.
+Communicates with the physical Live Bolt unit using the MQTT protocol and with the MongoDB
+remote database using the Mongoose library.
+
+Link: https://github.com/MF249/Senior-Design-Backend
